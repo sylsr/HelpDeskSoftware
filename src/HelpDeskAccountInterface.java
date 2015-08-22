@@ -4,9 +4,10 @@
 **/
 public interface HelpDeskAccountInterface{
 	/**
-	 * This method should be called when help desk attendentds are first logging
-	 * in and they enter their user name. This method will save their user name
-	 * and use it to authenticate them.
+	 * This method will querry the database for a username with the input string.
+	 * If a username matching the input string was found then the method will return true.
+	 * If a username was not found that matches the input string then the method will
+	 * return false.
 	 * @usrName
 	 * @return true if the user name was correct false if it was not.
 	 * @throws SQLException
@@ -18,7 +19,7 @@ public interface HelpDeskAccountInterface{
 	 * This method should be called when help desk attendentds are first logging
 	 * in and they enter their password This method will save their password
 	 * and use it to authenticate them.
-	 * @usrPass
+	 * @usrPasstouch 
 	 * @return true if the password was correct false if it was not.
 	 * @throws SQLException
 	 */
