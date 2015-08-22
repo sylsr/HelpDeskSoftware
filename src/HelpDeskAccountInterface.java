@@ -9,9 +9,10 @@ public interface HelpDeskAccountInterface{
 	 * and use it to authenticate them.
 	 * @usrName
 	 * @return true if the user name was correct false if it was not.
+	 * @throws SQLException
 	 * @
 	 */
-	boolean enterUserName(String usrName);
+	boolean enterUserName(String usrName) throws SQLException;
 	
 	/**
 	 * This method should be called when help desk attendentds are first logging
@@ -19,8 +20,9 @@ public interface HelpDeskAccountInterface{
 	 * and use it to authenticate them.
 	 * @usrPass
 	 * @return true if the password was correct false if it was not.
+	 * @throws SQLException
 	 */
-	boolean enterUserPass(String usrPass);
+	boolean enterUserPass(String usrPass) throws SQLException;
 	
 	/**
 	 * This method will change the password of the person after they are already
@@ -30,6 +32,7 @@ public interface HelpDeskAccountInterface{
 	 * @param usrPassNew
 	 * @param usrPassNewConfirm
 	 * @return true if the password was changed successfully false if there was an error.
+	 * @throws SQLException
 	 */
-	boolean changePassword(String usrName, String usrPass, String usrPassNew, String usrPassConfirm);	
+	boolean changePassword(String usrName, String usrPass, String usrPassNew, String usrPassConfirm) throws SQLException;	
 }
