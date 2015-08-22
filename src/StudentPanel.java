@@ -89,16 +89,14 @@ public class StudentPanel extends JPanel
 		blankPanel.setPreferredSize(new Dimension(100,100));
 		blankPanel.setVisible(false);
 		
-		studentPanel.setPreferredSize(new Dimension(800,700));
-		studentPanel.setBackground(Color.gray);
-		studentPanel.setLayout(new BorderLayout());
-		studentPanel.add(namePanel, BorderLayout.NORTH);
-		studentPanel.add(infoPanel, BorderLayout.CENTER);
-		studentPanel.add(buttonPanel, BorderLayout.WEST);
-		studentPanel.add(blankPanel, BorderLayout.EAST);
+		setPreferredSize(new Dimension(800,700));
+		setBackground(Color.gray);
+		setLayout(new BorderLayout());
+		add(namePanel, BorderLayout.NORTH);
+		add(infoPanel, BorderLayout.CENTER);
+		add(buttonPanel, BorderLayout.WEST);
+		add(blankPanel, BorderLayout.EAST);
 		
-		tab = new JTabbedPane();
-		tab.addTab("Student", studentPanel);
 	}
 	
 	private class ButtonListener implements ActionListener
